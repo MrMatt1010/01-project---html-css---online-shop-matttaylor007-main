@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <img src="images/logo-transparent.png" alt="logo" class="logo" />
+      </div>
+      <div>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="contact-form">
+      <form action="https://formspree.io/f/xvonayvb" method="post">
+        <div>
+          <h2 class="secondary-heading">Send us a message</h2>
+          <p class="contact-text">
+            If you have any questions or wish to place an order for one of our
+            plants, fill out the contact form below and we will get back to you
+            as soon as possible
+          </p>
+          <section>
+            <label for="name" class="name">Name</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              size="50"
+              class="contact"
+            />
+            <label for="email" class="name">Email</label>
+            <input id="email" name="email" type="email" class="contact" />
+
+            <label for="message" class="name">Message</label>
+            <textarea id="message" name="message" class="contact"></textarea>
+          </section>
+        </div>
+        <div class="button">
+          <button type="submit" class="contact-button">Contact Us</button>
+        </div>
+        <div class="address-info">
+          <h2 class="contact details">Contact Details</h2>
+          <p>123 Fake Street</p>
+          <p>Auckalnd</p>
+          <p>New Zealand</p>
+          <p>Phone: 09 123 4567</p>
+          <p>Email: sales@plantsandthings.co.nz</p>
+        </div>
+      </form>
+      <footer class="footer">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

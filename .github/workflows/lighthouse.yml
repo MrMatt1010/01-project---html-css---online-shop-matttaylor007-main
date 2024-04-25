@@ -1,0 +1,25 @@
+name: Lighthouse
+on: [push]
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - run: mkdir /tmp/artifacts
+      - name: Lighthouse
+        uses: foo-software/lighthouse-check-action@master
+        id: lighthouseCheck
+        with:
+          outputDirectory: /tmp/artifacts
+          urls: "https://online-shop-project-one.onrender.com/,https://online-shop-project-one.onrender.com/fishhook.html/,https://online-shop-project-one/dolphin.html/,https://online-shop-project-one.onrender.com/tradescantia.html/,https://online-shop-project-one.onrender.com/contact.html/,"
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: Lighthouse reports
+          path: /tmp/artifacts
+      - name: Verify Lighthouse Check results
+        uses: foo-software/lighthouse-check-status-action@master
+        with:
+          lighthouseCheckResults: ${{ steps.lighthouseCheck.outputs.lighthouseCheckResults }}
+          minAccessibilityScore: "100"
